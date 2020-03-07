@@ -6,10 +6,10 @@ import { ProductsContext } from '../context/products-context';
 import './Products.css';
 
 const Products = props => {
-  const productList = useContext(ProductsContext).products;
+  const productsList = useContext(ProductsContext).products;
   return (
     <ul className="products-list">
-      {productList.map(prod => (
+      {productsList.map(prod => (
         <ProductItem
           key={prod.id}
           id={prod.id}

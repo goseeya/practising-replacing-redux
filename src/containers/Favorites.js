@@ -5,6 +5,8 @@ import FavoriteItem from '../components/Favorites/FavoriteItem';
 import { ProductsContext } from '../context/products-context';
 import './Products.css';
 
+// use useContext for not frequent changing data like login, userAuthentication, every time it will rerender
+
 const Favorites = props => {
   const favoriteProducts = useContext(ProductsContext).products.filter(p => p.isFavorite);
   let content = <p className="placeholder">Got no favorites yet!</p>;
