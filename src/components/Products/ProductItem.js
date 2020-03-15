@@ -6,10 +6,10 @@ import './ProductItem.css';
 // import { ProductsContext } from '../../context/products-context';
 import { useStore } from '../../hooks-store/store';
 
-const ProductItem = props => {
+const ProductItem = React.memo(props => {
   // const [state, dispatch] = useStore();
   // const state = useStore[0];
-  const disptch = useStore()[1];
+  const disptch = useStore(false)[1];
 
   // const toggleFav = useContext(ProductsContext).toggleFav;
 
@@ -33,6 +33,6 @@ const ProductItem = props => {
       </div>
     </Card>
   );
-};
+});
 
 export default ProductItem;
